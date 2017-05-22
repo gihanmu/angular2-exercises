@@ -7,19 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var product_service_1 = require("./products/product.service");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = 'Acme Product Management';
+var StarComponent = (function () {
+    function StarComponent() {
+        this.rating = 4;
     }
-    return AppComponent;
+    StarComponent.prototype.ngOnChanges = function () {
+        this.starWidth = this.rating * 86 / 5;
+    };
+    return StarComponent;
 }());
-AppComponent = __decorate([
+StarComponent = __decorate([
     core_1.Component({
-        selector: 'pm-app',
-        template: "<div>\n                <h1>{{pageTitle}}</h1> \n                <pm-products></pm-products>\n                </div>",
-        providers: [product_service_1.ProductService]
+        selector: 'ai-star',
+        templateUrl: 'app/shared/star.component.html',
+        styleUrls: ['app/shared/star.component.css']
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], StarComponent);
+exports.StarComponent = StarComponent;
+//# sourceMappingURL=star-component.js.map
