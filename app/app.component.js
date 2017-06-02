@@ -17,7 +17,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'pm-app',
-        template: "<div>\n                <h1>{{pageTitle}}</h1> \n                <pm-products></pm-products>\n                </div>",
+        template: "<div>\n\t        <nav class='navbar navbar-default'>\n\t            <div class='container-fluid'>\n\t                <a class='navbar-brand'>{{pageTitle}}</a>\n\t                <ul class='nav navbar-nav'>\n\t                    <li><a routerLink=\"['welcome']\">Home</a></li>\n\t                    <li><a routerLink=\"['products']\">Product List</a></li>\n\t                </ul>\n\t            </div>\n\t        </nav>\n\t        <div class='container'>\n\t            <router-outlet></router-outlet>\n\t        </div>\n     \t</div>",
         providers: [product_service_1.ProductService]
     })
 ], AppComponent);
